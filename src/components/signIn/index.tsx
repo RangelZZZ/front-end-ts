@@ -1,8 +1,8 @@
 import * as React from 'react'
 import * as CSSModules from 'react-css-modules'
 import { connect } from 'react-redux'
-import { History } from 'history'
-import { Paper, RaisedButton, TextField } from 'material-ui'
+import { History } from 'history'      /* 是什么东西，react history里面没有这个东西啊*/
+import { Paper, RaisedButton, TextField } from 'material-ui'  /*为什么要用这个东西啊而不用bootstrap*/
 import { changeSignInFrom, ChangeSignInFromAction } from '../../actions/signIn'
 import { StoreState, SignInFrom } from '../../reducers/types'
 
@@ -16,7 +16,7 @@ interface Props {
 
 @CSSModules(styles)
 class Signin extends React.Component<Props, {}> {
-    public render() {
+    public render() {   /*为什么这里会有public，而另两个组件没有*/
         return (
             <Paper styleName="sign-box" zDepth={2}>
                 <TextField
@@ -51,7 +51,7 @@ class Signin extends React.Component<Props, {}> {
     }
 
     private signIn = () => {
-        this.props.history.push('/home')
+        this.props.history.push('/userInformation')
     }
 }
 

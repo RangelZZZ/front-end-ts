@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "build/dist",
     "module": "esnext",
-    "target": "es5",
+    "target": "es5", // 用于编译后的输出的语言
     "experimentalDecorators": true,
     "lib": ["es6", "dom"],
     "sourceMap": true,
